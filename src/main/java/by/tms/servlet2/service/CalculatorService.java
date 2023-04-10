@@ -8,6 +8,17 @@ import by.tms.servlet2.util.Calculator;
 
 public class CalculatorService implements Calculator {
 
+    private static CalculatorService instance;
+
+    private CalculatorService() {}
+
+    public static CalculatorService getInstance() {
+        if (instance == null) {
+            instance = new CalculatorService();
+        }
+        return instance;
+    }
+
     public Operation calculate(Operation operation) {
         switch (operation.type) {
             case SUM:

@@ -1,4 +1,4 @@
-package by.tms.servlet2;
+package by.tms.servlet2.Servlets;
 
 import by.tms.servlet2.entity.Operation;
 import by.tms.servlet2.entity.OperationTypes;
@@ -7,8 +7,6 @@ import by.tms.servlet2.service.CalculatorService;
 import by.tms.servlet2.storage.InMemoryoperationStorage;
 import by.tms.servlet2.storage.OperationStorage;
 import by.tms.servlet2.util.Calculator;
-import by.tms.servlet2.util.Validator;
-import by.tms.servlet2.validators.OperationValidator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,10 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(value = "/calc", name = "Servlet2")// http://localhost:8080/calc
-public class Servlet2 extends HttpServlet {
-    private final Calculator calculator = new CalculatorService();
-    private final OperationStorage storage = new InMemoryoperationStorage();
+@WebServlet(value = "/calc", name = "CalculatorServlet")// http://localhost:8080/calc
+public class CalculatorServlet extends HttpServlet {
+    private final Calculator calculator = CalculatorService.getInstance();
+    private final OperationStorage storage = InMemoryoperationStorage.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
