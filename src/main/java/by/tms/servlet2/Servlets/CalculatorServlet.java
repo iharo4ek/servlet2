@@ -44,9 +44,9 @@ public class CalculatorServlet extends HttpServlet {
         operation = calculator.calculate(operation);
         storage.save(operation);
 
-        req.setAttribute("num1", operation.num1);
-        req.setAttribute("num2", operation.num2);
-        req.setAttribute("result", operation.result);
+        req.setAttribute("num1", operation.getNum1());
+        req.setAttribute("num2", operation.getNum2());
+        req.setAttribute("result", operation.getResult());
         req.getRequestDispatcher("pages/calculate.jsp").forward(req, resp);
     }
 }
