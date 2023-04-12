@@ -21,14 +21,16 @@
         <option value="MUL">MUL</option>
         <option value="DIV">DIV</option>
     </select>
-
     <br>
     <br>
     <button>calculate</button>
     <br>
+    <br>
 </form>
 <p>result: ${result}</p>
-
+<form action="/history">
+<button>history</button>
+</form>
 </body>
 </html>
 
