@@ -1,4 +1,4 @@
-package by.tms.servlet2.Servlets;
+package by.tms.servlet2.servlets;
 
 import by.tms.servlet2.entity.Operation;
 import by.tms.servlet2.entity.OperationTypes;

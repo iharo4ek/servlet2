@@ -1,4 +1,4 @@
-package by.tms.servlet2.Servlets;
+package by.tms.servlet2.servlets;
 
 import by.tms.servlet2.entity.Operation;
 import by.tms.servlet2.storage.InMemoryoperationStorage;
@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(value="/history",name="HistoryServlet")
