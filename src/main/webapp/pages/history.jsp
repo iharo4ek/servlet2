@@ -17,7 +17,7 @@
 </form>
 
 <core:forEach items="${list}" var="operation">
-    <h2>${operation}</h2>
+    <h2>${operation.num1}</h2>
 </core:forEach>
 
 </body>
