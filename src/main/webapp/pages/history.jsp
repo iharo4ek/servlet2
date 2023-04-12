@@ -17,7 +17,7 @@
 </form>
 
 <core:forEach items="${list}" var="operation">
-    <h2>${operation.getNum1()} ${operation.getType} ${operation.getNum2()} = ${operation.getResult()}</h2>
+    <h2>${operation.getNum1()} ${operation.getType()} ${operation.getNum2()} = ${operation.getResult()}</h2>
 </core:forEach>
 
 </body>
